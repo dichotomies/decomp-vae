@@ -174,8 +174,9 @@ def run(
 
     # END
 
-    torch.cuda.set_device(cuda_dev)
-    print(torch.cuda.current_device())
+    if args.cuda:
+        torch.cuda.set_device(cuda_dev)
+        print(torch.cuda.current_device())
 
     modelC = getattr(models, 'VAE_{}'.format(args.model))
     train_loader, test_loader = modelC.getDataLoaders(args.batch_size, device=device)

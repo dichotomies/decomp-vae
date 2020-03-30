@@ -49,7 +49,9 @@ def run(
     if args.cuda:
         model.cuda()
 
-    state_dict = torch.load(runPath + '/model.rar', **conversion_kwargs)
+    state_dict = torch.load(
+        runPath + '/model.rar', **conversion_kwargs, map_location='cuda:0'
+    )
     model.load_state_dict(state_dict)
     train_loader, test_loader = model.getDataLoaders(args.batch_size, device=device)
 
@@ -132,3 +134,10 @@ def run(
     agg = defaultdict(list)
     test(args.beta, args.alpha, agg)
     save_vars(agg, runPath + '/losses2.rar')
+
+if __name__ == '__main__':
+    run(
+        run_path=cmds.save_dir,
+        disentanglement=cmds.disentanglement,
+        iwae_samples=cmds.iwae_samples
+    )

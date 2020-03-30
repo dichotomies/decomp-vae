@@ -134,6 +134,7 @@ def run(
     agg = defaultdict(list)
     test(args.beta, args.alpha, agg)
     save_vars(agg, runPath + '/losses2.rar')
+    return agg
 
 if __name__ == '__main__':
     run(

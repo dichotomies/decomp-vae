@@ -1,0 +1,59 @@
+RunID: 2020-03-30T03_42_35.293089
+8
+Load training data...
+Load testing data...
+p(z):
+<class 'torch.distributions.normal.Normal'>
+(tensor([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]]), tensor([[0.6882, 0.7913, 0.7979, 0.9221, 0.9242, 0.9248, 0.9362, 1.2132, 1.2307,
+         1.3569]], grad_fn=<SqrtBackward>))
+q(z|x):
+<class 'torch.distributions.normal.Normal'>
+Loss function:  decomp_objective
+Dataset size :  737280
+Batch size :  64
+Latent dimensions :  10
+Starting training...
+1
+====> Epoch: 001 Loss: 158.9
+2
+====> Epoch: 002 Loss: 104.5
+3
+====> Epoch: 003 Loss: 97.9
+4
+====> Epoch: 004 Loss: 91.1
+5
+====> Epoch: 005 Loss: 86.5
+6
+====> Epoch: 006 Loss: 83.8
+7
+====> Epoch: 007 Loss: 82.0
+8
+====> Epoch: 008 Loss: 80.6
+9
+====> Epoch: 009 Loss: 79.6
+10
+====> Epoch: 010 Loss: 78.7
+11
+====> Epoch: 011 Loss: 77.9
+12
+====> Epoch: 012 Loss: 77.3
+13
+====> Epoch: 013 Loss: 76.7
+14
+====> Epoch: 014 Loss: 76.2
+15
+====> Epoch: 015 Loss: 75.7
+16
+====> Epoch: 016 Loss: 75.2
+17
+====> Epoch: 017 Loss: 74.8
+18
+====> Epoch: 018 Loss: 74.4
+19
+====> Epoch: 019 Loss: 74.0
+20
+====> Epoch: 020 Loss: 73.6
+p(z) params:
+(tensor([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]], device='cuda:8'), tensor([[0.5412, 0.7899, 0.6127, 0.8481, 0.8968, 0.6904, 0.8792, 1.4941, 1.2684,
+         1.4468]], device='cuda:8', grad_fn=<SqrtBackward>))
+====> [ME-VAE] Time: 2555.368s or 00:42:35

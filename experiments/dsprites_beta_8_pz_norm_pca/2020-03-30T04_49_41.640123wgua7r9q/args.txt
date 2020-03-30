@@ -1,0 +1,2 @@
+3396d40f46c34dd928a1241f567a86276b0ff41b
+--cuda-dev=8 --name dsprites_beta_8_pz_norm_pca --model dsprites --skip-test --epochs 20 --lr 1e-4 --batch-size 64 --latent-dim 10 --beta 8 --prior-variance pca
